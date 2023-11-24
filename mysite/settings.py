@@ -82,6 +82,21 @@ DATABASES = {
     }
 }
 
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.postgresql',
+   #     'NAME': 'postgres',
+    #    'USER': 'postgres',
+     #   'PASSWORD': 'varma1234567890',
+      #  'HOST': 'database-2-instance-1.cvccuf0rqxar.us-east-1.rds.amazonaws.com',
+       # 'PORT': '5432',
+        #'OPTIONS': {
+         #   'sslmode': 'require',  # Add this line if your RDS instance requires SSL
+        #},
+    #}
+#}
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
