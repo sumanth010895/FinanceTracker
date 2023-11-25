@@ -8,8 +8,17 @@ phases:
       - echo "Installing dependencies"
       - yum update -y
       - yum install -y mariadb-client mariadb-server libmariadb-dev  # Install MariaDB development headers
+      - python -m pip install --upgrade pip
       - python -m pip install --upgrade pip setuptools
       - pip install -r requirements.txt
+
+      #Debugging commands
+      - echo "Python Version:"
+      - python --version
+
+      - echo "Installed Packages:"
+      - pip list
+
 
   pre_build:
     commands:
