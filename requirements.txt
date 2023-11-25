@@ -33,7 +33,7 @@ idna==3.4
 jmespath==1.0.1
 Markdown==3.5.1
 model-bakery==1.17.0
-mysqlclient==2.2.0
+sqlite3
 oauthlib==3.2.2
 packaging==23.2
 pathspec==0.10.1
