@@ -31,7 +31,6 @@ gunicorn==21.2.0
 html5lib==1.1
 idna==3.4
 jmespath==1.0.1
-mariadb==1.1.8
 Markdown==3.5.1
 model-bakery==1.17.0
 mysqlclient==2.2.0
