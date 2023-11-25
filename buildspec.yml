@@ -1,37 +1,27 @@
-version: 0.2
+version: 0.1
+
+environment_variables:
+  plaintext:
+    DJANGO_SETTINGS_MODULE: config.settings.test
+    SECRET_KEY: nosecret
+    DATABASE_DEFAULT_URL: sqlite:///db1.sqlite3
+    DATABASE_STREAMDATA_URL: sqlite:///db2.sqlite3
+    STREAM_INCOMING_PRIVATE_KEY: changeme
+    STREAM_INCOMING_PUBLIC_KEY: changeme
+    GOOGLE_API_KEY: changeme
+    OPBEAT_ENABLED: False
 
 phases:
-  install:
-    runtime-versions:
-      python: 3.8
-    commands:
-      - echo "Installing dependencies"
-      - yum update -y
-      - python -m pip install --upgrade pip
-      - python -m pip install --upgrade pip setuptools
-      - pip install -r requirements.txt
-
-      #Debugging commands
-      - echo "Python Version:"
-      - python --version
-
-      - echo "Installed Packages:"
-      - pip list
-
-
   pre_build:
     commands:
-      - echo "Running pre-build steps"
-
+      - echo Prebuild ops
+      - pip3 install -r requirements.txt
   build:
     commands:
-      - echo "Running build steps"
-      #- python manage.py migrate
-      #- python manage.py collectstatic --noinput
-
+      - echo Building the application 
   post_build:
     commands:
-      - echo "Running post-build steps"
-
+      - echo Build completed on `date`
 artifacts:
-  files: '**/*'
+  files:
+    - '**/*'
