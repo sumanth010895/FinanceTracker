@@ -5,8 +5,8 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/d/FinanceTracker
-ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/d/FinanceTracker/mysite/mysite/blog.sock blog.wsgi:application
+WorkingDirectory=\D:\FinanceTracker\mysite
+ExecStart=\D:\FinanceTracker\venv\Lib\site-packages --access-logfile - --workers 3 --bind unix:\D:\FinanceTracker\mysite\mysite\blog.sock blog.wsgi:application
 
        
 [Install]
