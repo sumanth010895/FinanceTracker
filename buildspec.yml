@@ -28,7 +28,7 @@ phases:
     commands:
       - echo "Running build steps"
       #- python manage.py migrate
-      - python manage.py collectstatic --noinput
+      #- python manage.py collectstatic --noinput
 
   post_build:
     commands:
