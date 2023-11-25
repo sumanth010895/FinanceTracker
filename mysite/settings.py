@@ -84,6 +84,20 @@ DATABASES = {
 
 #DATABASES = {
  #   'default': {
+  #     'NAME': 'postgres',
+   #     'USER': 'postgres',
+    #    'PASSWORD': 'varma12345',
+     #   'HOST': 'database-1.cvccuf0rqxar.us-east-1.rds.amazonaws.com',
+      #  'PORT': '5432',
+        #'OPTIONS': {
+         #   'sslmode': 'require',  # Add this line if your RDS instance requires SSL
+       # },
+    #}
+#}
+
+
+#DATABASES = {
+ #   'default': {
   #      'ENGINE': 'django.db.backends.postgresql',
    #     'NAME': 'postgres',
     #    'USER': 'postgres',
