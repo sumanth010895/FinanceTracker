@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/d/FinanceTracker/mysite
+WorkingDirectory=/d/FinanceTracker
 ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/d/FinanceTracker/mysite/mysite/blog.sock blog.wsgi:application
 
        
