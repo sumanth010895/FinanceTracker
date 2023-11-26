@@ -3,11 +3,13 @@ Description=gunicorn daemon
 Requires=gunicorn.socket
 After=network.target
 [Service]
-User=ubuntu
+User=root
 Group=www-data
-WorkingDirectory=\D:\FinanceTracker\mysite
-ExecStart=\D:\FinanceTracker\venv\Lib\site-packages --access-logfile - --workers 3 --bind unix:\D:\FinanceTracker\mysite\mysite\blog.sock blog.wsgi:application
-
-       
+WorkingDirectory=/root/financetracker
+ExecStart=/root/financetracker/env/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          mysite.wsgi:application
 [Install]
 WantedBy=multi-user.target
