@@ -6,7 +6,7 @@ After=network.target
 User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/financetracker
-ExecStart=/home/ubuntu/financetracker/env/bin/gunicorn \
+ExecStart=/home/ubuntu/financetracker/venv/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
