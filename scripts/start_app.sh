@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 
-sed -i 's/\[]/\["52.31.168.90"]/' /home/ubuntu/financetracker/mysite/settings.py
+sed -i 's/\[]/\["54.70.79.72"]/' /home/ubuntu/financetracker/mysite/settings.py
 
 python manage.py migrate 
 # python manage.py makemigrations     
